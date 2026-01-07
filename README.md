@@ -8,6 +8,7 @@ It identifies stocks that have built momentum below the zero line and are
 now pulling back after breaking out, offering optimal risk-reward entries.
 
 SIGNAL LOGIC (4-Stage State Machine):
+
 ┌─────────────────────────────────────────────────────────────┐
 │ Stage 0: Waiting for Setup                                  │
 │          Scanning for underwater golden cross (DEA < DIF < 0)│
