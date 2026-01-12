@@ -1,7 +1,7 @@
-MACD Underwater Breakout Radar
+MACD_full_breakout_watcher.py:
 A real-time MACD monitoring script for Tokyo Stock Exchange stocks.
 It tracks a full MACD recovery cycle from below zero and sends a single alert when momentum clearly cools down after a confirmed breakout.
-Core Logic
+Core Logic: 
 Data: 15-minute candles, MACD(12, 26, 9)
 Market hours only (TSE)
 The script follows a 4-stage MACD state machine:
@@ -22,6 +22,11 @@ DEA retraces to ≤ 50% of the peak DIF
 No alert has been sent for this ticker today
 If DIF drops below zero again, the entire state resets.
 
+Push Notification
+Platform: iOS
+App required: Bark
+Delivery: HTTP push via api.day.app
+Install Bark on your iPhone, get your personal key, and set it as BARK_KEY in the script.
 
 rsi_macd_low_finder.py:
 RSI + MACD Scanner
