@@ -51,4 +51,23 @@ Indicates weakening downside momentum
 In short:
 Price makes a new local low, but MACD histogram fails to confirm it.
 
-
+3_lines_method.py:
+Three-Track Reversal Strategy Monitor
+A long-running technical scanner for Tokyo Stock Exchange stocks, designed to detect oversold → momentum reversal → trend confirmation using a three-stage state machine.
+What This Script Does
+The program continuously monitors a predefined watchlist during TSE trading hours and sends a push notification when all three technical conditions align.
+It is meant to run 24/5 on a server (e.g. Raspberry Pi, VPS).
+Strategy Logic (Three Tracks)
+A stock triggers a BUY signal only when all three tracks occur in order:
+Track 1 – Bollinger Band Touch
+Price touches or pierces the -2σ lower Bollinger Band
+Interpreted as a short-term oversold condition
+Track 2 – RSI Reversal
+RSI(14) was below 30
+RSI breaks back above 30
+Signals momentum turning up
+Track 3 – MACD Confirmation
+Either:
+MACD golden cross (DIF crosses above DEA), or
+MACD histogram turns from negative to positive
+When Track 3 is confirmed → BUY SIGNAL
