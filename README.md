@@ -9,24 +9,23 @@ now pulling back after breaking out, offering optimal risk-reward entries.
 
 SIGNAL LOGIC (4-Stage State Machine):
 
-┌─────────────────────────────────────────────────────────────┐
-│ Stage 0: Waiting for Setup                                  │
-│          Scanning for underwater golden cross (DEA < DIF < 0)│
-├─────────────────────────────────────────────────────────────┤
-│ Stage 1: Underwater Golden Cross Confirmed                  │
-│          Waiting for DIF to break above zero line           │
-│          Reset if: DIF crosses below DEA (death cross)       │
-├─────────────────────────────────────────────────────────────┤
-│ Stage 2: DIF Breakthrough Confirmed                         │
-│          Waiting for DEA to break above zero line           │
-│          Reset if: DIF drops below zero                      │
-├─────────────────────────────────────────────────────────────┤
-│ Stage 3: Both Lines Above Zero - Tracking Mode             │
-│          • Track maximum DIF value since DEA crossed zero    │
-│          • Alert when DEA retraces to 50% of peak DIF       │
-│          • One alert per day to avoid spam                   │
-│          Reset if: DIF drops below zero (new cycle begins)   │
-└─────────────────────────────────────────────────────────────┘
+
+Stage 0:  Waiting for Setup
+          Scanning for underwater golden cross (DEA < DIF < 0)
+
+Stage 1:  Underwater Golden Cross Confirmed
+          Waiting for DIF to break above zero line
+          Reset if: DIF crosses below DEA (death cross)
+
+Stage 2:  DIF Breakthrough Confirmed
+          Waiting for DEA to break above zero line
+          Reset if: DIF drops below zero
+
+Stage 3: Both Lines Above Zero - Tracking Mode
+          • Track maximum DIF value since DEA crossed zero
+          • Alert when DEA retraces to 50% of peak DIF
+          • One alert per day to avoid spam
+Reset if: DIF drops below zero (new cycle begins)
 
 WHY IT WORKS:
 1. Underwater GC shows accumulation phase with reduced selling pressure
